@@ -2,16 +2,22 @@
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta charset="utf-8" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/102/three.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+  </body>
 </head>
 <body>
 
 
-  <div *ngFor="let Object of Object" class="text-box">
+  <div *ngFor="let Object of Object" class="text-box" [ng-cloak]>
 
     <h3>
-      <a href="Object.ID" [title]="Object.ID">
+      <a (click)="display()" href="Object.ID" [title]="Object.ID">
         {{ Object.ID }}
       </a>
       <button href="" class="btn btn-white btn-animate">Edit Colour</button>
